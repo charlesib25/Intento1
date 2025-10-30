@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="utf-8">
+  <title>Proyecto Ingeniería Mecatrónica - Otoño 2025</title>  
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      color: #222;
+    }
+
+    /* Marco rojo superior */
+    header {
+      background-color: #c8102e;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 5px solid #8b0000;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    h2, h3 {
+      color: #333;
+      text-align: center;
+    }
+
+    p {
+      max-width: 900px;
+      margin: 10px auto;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    ul {
+      max-width: 900px;
+      margin: 10px auto;
+      padding-left: 40px;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      margin: 15px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    section {
+      background-color: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 950px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Proyecto Página Web "Ingeniería Mecatrónica / Otoño 2025"</h1>
+    <h2>Página Web - Carlos Arturo Pérez de la Cruz</h2>
+  </header>
+
+  <section>
+    <h3>Introducción a Tinkercad</h3>  
+    <p>
+      En esta tarea introducimos una nueva plataforma (<strong>Tinkercad</strong>), software desarrollado por <em>Autodesk</em> de uso libre que ofrece herramientas fáciles para empezar en el mundo del modelado 3D y la simulación de circuitos, dirigido principalmente a principiantes.
+    </p>
+    <img src="https://amador.edu.do/wp-content/uploads/2020/11/tinkercad.png" alt="Imagen representativa del programa" height="200" width="200">
+    <p>
+      Después de esta pequeña introducción, procedemos a explicar los trabajos hechos con esta plataforma.
+    </p>
+  </section>
+
+  <section>
+    <h2>Tarea 1. Corte láser</h2>
+    <p>
+      En este caso la instrucción es crear un diseño en 2D. La estructura es un cubo 5x5. Esta será hecha por 6 caras dando la forma con entradas para poder armarlo después del corte láser.
+    </p>
+    <ul> 
+      <li>Tipo de archivo: <strong>SVG</strong></li>
+      <li>Material utilizado: <strong>MDF</strong></li>
+    </ul>
+    <img src="https://www.madepanel.com.mx/wp-content/uploads/2022/09/mdf-melaminico-colores-madera.webp" alt="Imagen MDF" height="200" width="200">
+    <h3>Diseño en el programa</h3>
+    <img src="Diseño2D.jpeg" alt="Diseño del cubo en el programa" height="200" width="200">
+    <h3>Diseño armado</h3>
+    <img src="Cubo.jpeg" alt="Imagen del cubo hecho" height="200" width="200">
+  </section>
+
+  <section>
+    <h2>Tarea 2. Impresión 3D</h2>
+    <p>
+      Usando las mismas instrucciones, creamos una figura móvil que permite manipular su estructura. En este caso el diseño es en 3D y la figura puede ser libre.
+    </p>
+    <p>
+      Para esta figura utilicé la idea de un gadget antiestrés con aros interconectados que permiten su movimiento vertical y horizontal sin separarse de su estructura.
+    </p>
+    <ul>
+      <li>Tipo de archivo: <strong>STL/OBJ</strong></li>
+      <li>Material utilizado: <strong>PLA</strong></li>
+    </ul>
+    <img src="https://web-objects.markforged.com/craft/common/_1200x630_crop_center-center_82_none/5c1a6473b7365571afaf6703_shutterstock_1145888252.jpg?mtime=1684428975" alt="Imagen PLA" height="200" width="200">
+    <h3>Diseño del programa</h3>
+    <img src="Diseño3D.jpeg" alt="Diseño de figura movible" height="200" width="200">
+    <h3>Diseño final</h3>
+    <img src="Figura.jpeg" alt="Imagen de la figura hecha" height="200" width="200">
+  </section>
+
+  <section>
+    <h2>Tarea 3. Circuito PCB</h2>
+    <p>
+      Para esta tarea usamos el programa <strong>EasyEDA</strong>, el cual permite el diseño de placas PCB a través de su esquema y la simulación de componentes.
+    </p>
+    <img src="Easy.jpeg" alt="Programa EasyEDA" height="200" width="200">
+    <p>
+      En este caso, se realizó un circuito que, mediante un controlador, permite el encendido y apagado de un diodo LED.
+    </p>
+    <ul>
+      <li>Diseño de base:</li>
+      <img src="Diagrama.jpeg" alt="Diagrama del PCB" height="200" width="200">
+      <li>Diseño de la placa PCB:</li>
+      <img src="Placa.jpeg" alt="Diseño de la placa" height="200" width="200">
+      <li>Placa impresa y soldada:</li>
+      <img src="1.jpeg" alt="Placa ensamblada" height="200" width="200">
+      <img src="2.jpeg" alt="Trabajo final" height="200" width="200">
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Carlos Arturo Pérez de la Cruz — Ingeniería Mecatrónica
+  </footer>
+
+</body>
+</html
