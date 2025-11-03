@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+  color: #2f3640;
+}
+
+/* --- PANTALLA DE INICIO --- */
+.pantalla-inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #b30000, #8a0000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.8s ease;
+}
+
+.pantalla-inicio.desvanecer {
+  opacity: 0;
+}
+
+.menu-inicio {
+  animation: aparecer 1s ease-in-out;
+}
+
+.logo-inicio {
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.menu-inicio h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.menu-inicio h2 {
+  font-weight: normal;
+  color: #ffeaea;
+}
+
+.botones {
+  margin-top: 2rem;
+}
+
+.botones button {
+  background: white;
+  color: #b30000;
+  border: none;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botones button:hover {
+  background: #ffeaea;
+  transform: scale(1.05);
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+#contenido {
+  display: none;
+}
+
+header {
+  background-color: #b30000;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header img {
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header h2 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #ffeaea;
+}
+
+/* --- MENÚ SUPERIOR --- */
+nav.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #8a0000;
+  padding: 0.7rem 0;
+}
+
+nav.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 2rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav.menu a:hover {
+  color: #ffeaea;
+  text-decoration: underline;
+}
+
+/* --- SECCIONES --- */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+section:hover {
+  transform: scale(1.01);
+}
+
+section h3, section h2 {
+  color: #b30000;
+}
+
+section img {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+  text-align: center;
+  background-color: #b30000;
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 700px) {
+  nav.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav.menu a {
+    margin: 0.5rem 0;
+  }
+}
