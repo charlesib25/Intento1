@@ -1,28 +1,72 @@
-/* ===== ESTILO GENERAL ===== */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #222;
+/* ======= FUENTE Y ESTILO GENERAL ======= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-/* ===== MENÚ INICIAL ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes backgroundMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* ======= MENÚ INICIAL ======= */
 .menu-inicio {
+  background: linear-gradient(135deg, #b71c1c, #e53935, #ff8a80);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #b71c1c, #e53935);
   color: white;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+  animation: backgroundMove 25s linear infinite;
 }
 
 .menu-container {
-  background: rgba(255,255,255,0.1);
-  padding: 40px;
+  background: rgba(255,255,255,0.15);
+  padding: 40px 60px;
   border-radius: 20px;
   backdrop-filter: blur(8px);
+  animation: fadeIn 1.2s ease;
+}
+
+.titulo {
+  font-size: 2.2em;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.instruccion {
+  margin-top: 25px;
 }
 
 .botones-menu {
@@ -36,52 +80,66 @@ body {
   background: white;
   color: #b71c1c;
   padding: 15px 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .btn:hover {
   background: #ffebee;
-  transform: scale(1.05);
+  transform: translateY(-4px) scale(1.05);
 }
 
-/* ===== HEADER Y SECCIONES ===== */
-header {
-  background-color: #b71c1c;
+/* ======= ENCABEZADOS ======= */
+.header-principal {
+  background: linear-gradient(90deg, #b71c1c, #e53935);
   color: white;
-  padding: 15px;
   text-align: center;
-}
-
-header nav {
-  margin-top: 10px;
+  padding: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .volver {
-  color: white;
+  background: white;
+  color: #b71c1c;
   text-decoration: none;
-  background: #8e0000;
   padding: 10px 15px;
   border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .volver:hover {
-  background: #ff5252;
+  background: #ffebee;
 }
 
-section.contenido {
+/* ======= CONTENIDO ======= */
+.contenido {
   max-width: 900px;
   margin: 40px auto;
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.contenido h2 {
+  color: #b71c1c;
+  margin-top: 30px;
 }
 
 img {
-  border-radius: 10px;
-  margin: 10px 0;
-  max-width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
 }
