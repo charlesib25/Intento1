@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tareas del Semestre</title>  
+  <title>Tareas - Fabricación Digital</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body class="fade-in">
 
-  <header class="header-tareas">
-    <div id="logo">
-      <img src="IBERO.jpeg" alt="Logo IBERO" height="80">
-      <h2>Universidad IBERO</h2>
-    </div>
-    <nav>
-      <a href="index.html" class="volver">← Volver al Menú</a>
-    </nav>
-    <div class="titulo-header">
-      <h1>Proyecto Web "Ingeniería Mecatrónica / Otoño 2025"</h1>
-      <h2>Por: Carlos Arturo Pérez de la Cruz</h2>
+<body>
+  <header>
+    <div id="container">
+      <a href="https://ibero.mx/" class="logo">
+        <img src="IBERO.jpeg" alt="Logo IBERO">
+        <h2 class="nombre-universidad">Universidad IBERO</h2>
+      </a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="escuela.html">Datos del Creador</a>
+        <a href="tareas.html" class="activo">Trabajo</a>
+      </nav>
     </div>
   </header>
 
-  <section id="contentT1" class="tareas-contenedor">
+  <main class="fade-in">
+    <section id="contentT1" class="tareas-contenedor">
 
-  <!-- TAREA 1 -->
-  <article class="tarea">
-    <h2>Tarea 1 · Corte Láser</h2>
-    <p>La instrucción fue crear un diseño en 2D. La estructura es un cubo 5x5 armado mediante 6 caras con uniones por corte láser.</p>
-    
-    <ul> 
-      <li>Tipo de archivo: SVG</li>
-      <li>Material: MDF</li>
-    </ul>
+      <!-- TAREA 1 -->
+      <article class="tarea">
+        <h2>Tarea 1 · Corte Láser</h2>
+        <p>La instrucción fue crear un diseño en 2D. La estructura es un cubo 5x5 armado mediante 6 caras con uniones por corte láser.</p>
+        
+        <ul> 
+          <li>Tipo de archivo: SVG</li>
+          <li>Material: MDF</li>
+        </ul>
 
-    <div class="imagenes-tarea">
-      <img src="D1.jpeg" alt="Diseño del cubo" class="img-tarea">
-      <img src="Cubo.jpeg" alt="Cubo armado" class="img-tarea">
+        <div class="imagenes-tarea">
+          <img src="D1.jpeg" alt="Diseño del cubo" class="img-tarea">
+          <img src="Cubo.jpeg" alt="Cubo armado" class="img-tarea">
+        </div>
+
+        <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/')">
+          🔍 Ver diseño en Tinkercad
+        </button>
+      </article>
+
+      <!-- TAREA 2 -->
+      <article class="tarea">
+        <h2>Tarea 2 · Impresión 3D</h2>
+        <p>Diseño de una figura móvil tipo gadget antiestrés, con aros interconectados impresos en PLA que permiten movimiento multidireccional.</p>
+        
+        <ul>
+          <li>Tipo de archivo: STL / OBJ</li>
+          <li>Material: PLA</li>
+        </ul>
+
+        <div class="imagenes-tarea">
+          <img src="Diseño3D.jpeg" alt="Diseño 3D" class="img-tarea">
+          <img src="Figura.jpeg" alt="Figura impresa" class="img-tarea">
+        </div>
+
+        <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/dashboard?type=3d-design&collection=designs')">
+          🧩 Visualizar modelo 3D
+        </button>
+      </article>
+
+      <!-- TAREA 3 -->
+      <article class="tarea">
+        <h2>Tarea 3 · Circuito PCB</h2>
+        <p>Uso del programa EasyEDA para diseñar una placa PCB que controla el encendido y apagado de un LED mediante un microcontrolador.</p>
+        
+        <ul>
+          <li>Diseño base y esquemático</li>
+          <li>Placa final soldada</li>
+        </ul>
+
+        <div class="imagenes-tarea">
+          <img src="Diagrama.jpeg" alt="Diagrama PCB" class="img-tarea">
+          <img src="Placa.jpeg" alt="Placa final" class="img-tarea">
+        </div>
+
+        <button class="btn-ver" onclick="abrirVisor('https://easyeda.com/')">
+          ⚡ Ver circuito en EasyEDA
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="visor-modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarVisor()">&times;</span>
+      <iframe id="visor-frame" src="" frameborder="0"></iframe>
     </div>
-
-    <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/')">
-      🔍 Ver diseño en Tinkercad
-    </button>
-  </article>
-
-  <!-- TAREA 2 -->
-  <article class="tarea">
-    <h2>Tarea 2 · Impresión 3D</h2>
-    <p>Diseño de una figura móvil tipo gadget antiestrés, con aros interconectados impresos en PLA que permiten movimiento multidireccional.</p>
-    
-    <ul>
-      <li>Tipo de archivo: STL / OBJ</li>
-      <li>Material: PLA</li>
-    </ul>
-
-    <div class="imagenes-tarea">
-      <img src="Diseño3D.jpeg" alt="Diseño 3D" class="img-tarea">
-      <img src="Figura.jpeg" alt="Figura impresa" class="img-tarea">
-    </div>
-
-    <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/dashboard?type=3d-design&collection=designs')">
-      🧩 Visualizar modelo 3D
-    </button>
-  </article>
-
-  <!-- TAREA 3 -->
-  <article class="tarea">
-    <h2>Tarea 3 · Circuito PCB</h2>
-    <p>Uso del programa EasyEDA para diseñar una placa PCB que controla el encendido y apagado de un LED mediante un microcontrolador.</p>
-    
-    <ul>
-      <li>Diseño base y esquemático</li>
-      <li>Placa final soldada</li>
-    </ul>
-
-    <div class="imagenes-tarea">
-      <img src="Diagrama.jpeg" alt="Diagrama PCB" class="img-tarea">
-      <img src="Placa.jpeg" alt="Placa final" class="img-tarea">
-    </div>
-
-    <button class="btn-ver" onclick="abrirVisor('https://easyeda.com/')">
-      ⚡ Ver circuito en EasyEDA
-    </button>
-  </article>
-</section>
-
-<!-- Modal para visualizar programas -->
-<div id="visor-modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar" onclick="cerrarVisor()">&times;</span>
-    <iframe id="visor-frame" src="" frameborder="0"></iframe>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <footer>
+    <p>© 2025 - Carlos Arturo Pérez de l
