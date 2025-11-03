@@ -1,13 +1,76 @@
+/* ===== ESTILO GENERAL ===== */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   margin: 0;
-  padding: 0;
-  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff5f5;
+  color: #333;
 }
 
+header {
+  background-color: #a00000;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.nombre-universidad {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #ffdddd;
+  transform: scale(1.1);
+}
+
+nav a.activo {
+  border-bottom: 2px solid #ffffff;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+footer {
+  background-color: #a00000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== EFECTO DE DESVANECIDO ===== */
 .fade-in {
-  animation: fadeIn 1.2s ease-in;
+  animation: fadeIn 1s ease-in;
 }
 
 @keyframes fadeIn {
@@ -15,87 +78,72 @@ body {
   to { opacity: 1; }
 }
 
-/* Header */
-.header-tareas {
-  text-align: center;
-  background: #0d47a1;
-  color: white;
-  padding: 20px;
-  border-bottom: 5px solid #1976d2;
+/* ===== SECCIÓN DE TAREAS ===== */
+.tareas-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background-color: #fff5f5;
 }
 
-.volver {
-  color: white;
-  text-decoration: none;
-  background: #1565c0;
-  padding: 8px 16px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.volver:hover {
-  background: #42a5f5;
-}
-
-/* Tarjetas de tareas */
-.tareas-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  padding: 40px;
-}
-
-.tarjeta {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+.tarea {
+  border-left: 8px solid #a00000;
   padding: 25px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tarjeta:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-}
-
-.imagen-tarea {
-  width: 80%;
   border-radius: 15px;
-  margin-top: 15px;
-  transition: 0.3s;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.imagen-tarea:hover {
+.tarea:hover {
+  transform: scale(1.02);
+}
+
+.tarea h2 {
+  color: #a00000;
+  border-bottom: 2px solid #d32f2f;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.img-tarea {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.img-tarea:hover {
   transform: scale(1.05);
 }
 
-/* Botones */
-.btn-visor {
-  margin-top: 15px;
-  background: #1565c0;
+.btn-ver {
+  background-color: #a00000;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  margin-top: 15px;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.btn-visor:hover {
-  background: #42a5f5;
+.btn-ver:hover {
+  background-color: #d32f2f;
   transform: scale(1.05);
 }
 
-/* Modal */
+/* ===== MODAL ===== */
 .modal {
   display: none;
   position: fixed;
   z-index: 999;
-  left: 0; top: 0;
+  top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
 }
@@ -106,7 +154,6 @@ body {
   height: 80%;
   border-radius: 15px;
   position: relative;
-  overflow: hidden;
   animation: fadeIn 0.5s;
 }
 
@@ -120,12 +167,11 @@ body {
   top: 10px;
   right: 20px;
   font-size: 30px;
-  color: #1565c0;
+  color: #a00000;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .cerrar:hover {
-  color: red;
+  color: #d32f2f;
 }
