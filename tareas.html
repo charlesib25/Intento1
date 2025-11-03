@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tareas - Fabricación Digital</title>
+  <title>Trabajos - Carlos Arturo Pérez de la Cruz</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
   <header>
     <div id="container">
@@ -16,78 +15,38 @@
       </a>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="escuela.html">Datos del Creador</a>
-        <a href="tareas.html" class="activo">Trabajo</a>
+        <a href="escuela.html">Mi Escuela</a>
+        <a href="info.html">Datos del Creador</a>
       </nav>
     </div>
   </header>
 
-  <main class="fade-in">
-    <section id="contentT1" class="tareas-contenedor">
+  <main>
+    <section class="tareas-contenedor">
+      <div class="tarea">
+        <h2>Programa 1: Matriz por Escalar</h2>
+        <p>Este programa realiza el producto de una matriz por un escalar utilizando funciones en C.</p>
+        <img src="matriz.png" alt="Matriz Escalar" class="img-tarea">
+        <button class="btn-ver" onclick="abrirVisor('programa1.html')">Ver Programa</button>
+      </div>
 
-      <!-- TAREA 1 -->
-      <article class="tarea">
-        <h2>Tarea 1 · Corte Láser</h2>
-        <p>La instrucción fue crear un diseño en 2D. La estructura es un cubo 5x5 armado mediante 6 caras con uniones por corte láser.</p>
-        
-        <ul> 
-          <li>Tipo de archivo: SVG</li>
-          <li>Material: MDF</li>
-        </ul>
+      <div class="tarea">
+        <h2>Programa 2: Método de Cramer</h2>
+        <p>Resuelve sistemas de ecuaciones lineales mediante el método de Cramer en C.</p>
+        <img src="cramer.png" alt="Método de Cramer" class="img-tarea">
+        <button class="btn-ver" onclick="abrirVisor('programa2.html')">Ver Programa</button>
+      </div>
 
-        <div class="imagenes-tarea">
-          <img src="D1.jpeg" alt="Diseño del cubo" class="img-tarea">
-          <img src="Cubo.jpeg" alt="Cubo armado" class="img-tarea">
-        </div>
-
-        <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/')">
-          🔍 Ver diseño en Tinkercad
-        </button>
-      </article>
-
-      <!-- TAREA 2 -->
-      <article class="tarea">
-        <h2>Tarea 2 · Impresión 3D</h2>
-        <p>Diseño de una figura móvil tipo gadget antiestrés, con aros interconectados impresos en PLA que permiten movimiento multidireccional.</p>
-        
-        <ul>
-          <li>Tipo de archivo: STL / OBJ</li>
-          <li>Material: PLA</li>
-        </ul>
-
-        <div class="imagenes-tarea">
-          <img src="Diseño3D.jpeg" alt="Diseño 3D" class="img-tarea">
-          <img src="Figura.jpeg" alt="Figura impresa" class="img-tarea">
-        </div>
-
-        <button class="btn-ver" onclick="abrirVisor('https://www.tinkercad.com/dashboard?type=3d-design&collection=designs')">
-          🧩 Visualizar modelo 3D
-        </button>
-      </article>
-
-      <!-- TAREA 3 -->
-      <article class="tarea">
-        <h2>Tarea 3 · Circuito PCB</h2>
-        <p>Uso del programa EasyEDA para diseñar una placa PCB que controla el encendido y apagado de un LED mediante un microcontrolador.</p>
-        
-        <ul>
-          <li>Diseño base y esquemático</li>
-          <li>Placa final soldada</li>
-        </ul>
-
-        <div class="imagenes-tarea">
-          <img src="Diagrama.jpeg" alt="Diagrama PCB" class="img-tarea">
-          <img src="Placa.jpeg" alt="Placa final" class="img-tarea">
-        </div>
-
-        <button class="btn-ver" onclick="abrirVisor('https://easyeda.com/')">
-          ⚡ Ver circuito en EasyEDA
-        </button>
-      </article>
+      <div class="tarea">
+        <h2>Programa 3: Producto de Matrices</h2>
+        <p>Calcula el producto de dos matrices de orden n x n con validación de entradas.</p>
+        <img src="producto.png" alt="Producto de Matrices" class="img-tarea">
+        <button class="btn-ver" onclick="abrirVisor('programa3.html')">Ver Programa</button>
+      </div>
     </section>
   </main>
 
-  <!-- Modal -->
+  <!-- Modal para mostrar programas -->
   <div id="visor-modal" class="modal">
     <div class="modal-content">
       <span class="cerrar" onclick="cerrarVisor()">&times;</span>
@@ -96,4 +55,9 @@
   </div>
 
   <footer>
-    <p>© 2025 - Carlos Arturo Pérez de l
+    <p>© 2025 Universidad IBERO - Carlos Arturo Pérez de la Cruz</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
