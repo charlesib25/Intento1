@@ -6,9 +6,9 @@
   <title>Tareas del Semestre</title>  
   <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body class="fade-in">
 
-  <header>
+  <header class="header-tareas">
     <div id="logo">
       <img src="IBERO.jpeg" alt="Logo IBERO" height="80">
       <h2>Universidad IBERO</h2>
@@ -17,13 +17,54 @@
       <a href="index.html" class="volver">← Volver al Menú</a>
     </nav>
     <div class="titulo-header">
-      <h1>Proyecto Página Web "Ingeniería Mecatrónica / Otoño 2025"</h1>
+      <h1>Proyecto Web "Ingeniería Mecatrónica / Otoño 2025"</h1>
       <h2>Por: Carlos Arturo Pérez de la Cruz</h2>
     </div>
   </header>
 
-  <!-- Aquí pega todo el contenido original de tus tareas -->
-  <!-- (TinkerCad, Corte Láser, Impresión 3D, PCB, etc.) -->
+  <main class="tareas-container">
 
+    <!-- Tarea 1 -->
+    <section class="tarjeta fade">
+      <h2>Tarea 1 · Corte Láser</h2>
+      <p>Diseño en 2D de un cubo 5x5 cm con ensamblaje por corte láser utilizando MDF.</p>
+      <img src="Cubo.jpeg" alt="Cubo armado" class="imagen-tarea">
+
+      <button class="btn-visor" onclick="abrirVisor('https://www.tinkercad.com/dashboard?type=circuits&collection=designs')">
+        🔍 Ver diseño en Tinkercad
+      </button>
+    </section>
+
+    <!-- Tarea 2 -->
+    <section class="tarjeta fade">
+      <h2>Tarea 2 · Impresión 3D</h2>
+      <p>Diseño de una figura móvil tipo gadget antiestrés con piezas interconectadas impresas en PLA.</p>
+      <img src="Figura.jpeg" alt="Figura impresa" class="imagen-tarea">
+      <button class="btn-visor" onclick="abrirVisor('https://www.tinkercad.com/dashboard?type=3d-design&collection=designs')">
+        🧩 Ver modelo 3D
+      </button>
+    </section>
+
+    <!-- Tarea 3 -->
+    <section class="tarjeta fade">
+      <h2>Tarea 3 · Circuito PCB</h2>
+      <p>Diseño de un circuito con EasyEDA para encender y apagar un LED mediante un microcontrolador.</p>
+      <img src="Placa.jpeg" alt="Diseño PCB" class="imagen-tarea">
+      <button class="btn-visor" onclick="abrirVisor('https://easyeda.com/')">
+        ⚡ Ver circuito en EasyEDA
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Ventana modal para visualizar programas -->
+  <div id="visor-modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarVisor()">&times;</span>
+      <iframe id="visor-frame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
